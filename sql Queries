@@ -1,0 +1,29 @@
+CREATE TABLE `nursery` (
+  `id` int(11) NOT NULL,
+  `nursery_name` varchar(50) NOT NULL,
+  `description` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `nursery`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `nursery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+
+
+
+CREATE TABLE `nursery_catalog` (
+  `id` int(11) NOT NULL,
+  `nursery_id` int(11) DEFAULT NULL,
+  `plant_id` int(11) DEFAULT NULL,
+  `material_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `nursery_catalog`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `nursery_catalog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
